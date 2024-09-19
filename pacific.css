@@ -7,14 +7,15 @@ html {
 }
 
 body {
-    
+    margin: 0;
+    background-color: #90c7e3;
     color: #666666;
     font-family: Verdana, Arial, sans-serif;
 }
 
 header {
     
-    height: 120px;
+    padding: 1em;
     background-position: right;
     background-color: #002171;
     color: #ffffff;
@@ -34,25 +35,32 @@ header a:hover {
 }
 
 h1 {
-    font-size: 3em;
-    letter-spacing: 0.25em;
+    font-size: 1.5em;
     text-align: center;
-    padding-top: .5em;
+    
 }
 
 nav {
-    font-weight: bold;
-    float: left;
-    width: 160px;
-    padding: 0;
-    font-size: 1.2em;
-    
-    position: fixed;
+    text-align: center;
+    background-color: white;
+    font-size: 1.2em;    
 }
 
 nav ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
     list-style-type: none;
+    padding-left: 0;
+}
+
+nav li {
+    padding-top: .5em;
+    padding-bottom: .5em;
     padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    border-bottom: 1px solid;
 }
 
 nav a:link { 
@@ -87,15 +95,12 @@ footer {
     font-style: italic;
     text-align: center;
     padding: 1em;
-    margin-left: 170px;
     background-color: #ffffff;
 }
 
 section {
-    float: left;
-    width: 33%;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding-left: .5em;
+    padding-right: .5em;
 }
 
 h3 {
@@ -106,33 +111,34 @@ main {
     padding-left: 2em;
     padding-right: 2em;
     display: block;
-    background: #ffffff;
-    margin-left: 170px;
-    overflow: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 #homehero {
     height: 300px;
     background-image: url(images/coast.jpg);
-    background-size: 100% 100%;
+    background-size: 200% 100%;
     background-repeat: no-repeat;
-    margin-left: 170px;
+    
 }
 
 #yurthero {
     height: 300px;
     background-image: url(images/yurt.jpg);
-    background-size: 100% 100%;
+    background-size: 200% 100%;
     background-repeat: no-repeat;
-    margin-left: 170px;
+    
 }
 
 #trailhero {
     height: 300px;
     background-image: url(images/trail.jpg);
-    background-size: 100% 100%;
+    background-size: 200% 100%;
     background-repeat: no-repeat;
-    margin-left: 170px;
+    
 }
 
 nav a {
@@ -140,13 +146,20 @@ nav a {
 }
 
 #wrapper {
-    background-image: linear-gradient(#ffffff, #90C7E3);
+    
     height: 100%;
-    width: 80%;
-    margin-right: auto;
-    margin-left: auto;
+    
+    
     background-color: #ffffff;
     min-width: 960px;
     max-width: 2048px;
-    box-shadow: 10px 10px;
+    
+}
+
+#mobile {
+    display: inline;
+}
+
+#desktop {
+    display: none;
 }
