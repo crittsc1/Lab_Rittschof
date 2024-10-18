@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="pacific.css">
+    <script src="validation.js"></script>
     <title>Pacific Trails Resort Reservations</title>
 </head>
 
@@ -29,15 +30,15 @@
             <h2>Contact Us</h2>
             <p>Required fields are marked with an asterisk*.</p>
 
-            <form action="https://webdevbasics.net/scripts/pacific.php" method="post">
+            <form onsubmit="return validateForm();" action="https://webdevbasics.net/scripts/pacific.php" method="post">
                 <label for="fname">*First Name:</label>
-                <input type="text" id="fname" name="myFName" required>
+                <input type="text" id="fname" name="myFName">
 
                 <label for="lname">*Last Name:</label>
-                <input type="text" id="lname" name="myLName" required>
+                <input type="text" id="lname" name="myLName">
         
                 <label for="email">*E-mail:</label>
-                <input type="text" id="email" name="myEmail" required>
+                <input type="text" id="email" name="myEmail">
 
                 <label for="Phone">Phone:</label>
                 <input type="text" id="Phone" name="myPhone">
@@ -49,7 +50,7 @@
                 <input type="number" id="Nights" name="myNights" min="1" max="14">
 
                 <label for="myComments">*Comments:</label>
-                <textarea id="myComments" name="myComments" rows="2" cols="20" required></textarea>
+                <textarea id="myComments" name="myComments" rows="2" cols="20"></textarea>
         
                 <input type="submit" value="Submit" id="mySubmit">
             </form>
